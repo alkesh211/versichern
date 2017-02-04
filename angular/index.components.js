@@ -1,3 +1,4 @@
+import {CreateBlockComponent} from './app/components/create-block/create-block.component';
 import {SliderListComponent} from './app/components/slider-list/slider-list.component';
 import { CreateSliderFormComponent} from './app/components/create_slider_form/create_slider_form.component';
 import { CreatePostFormComponent} from './app/components/create_post_form/create_post_form.component';
@@ -31,6 +32,7 @@ import { LoginFormComponent } from './app/components/login-form/login-form.compo
 import { RegisterFormComponent } from './app/components/register-form/register-form.component'
 
 angular.module('app.components')
+	.component('createBlock', CreateBlockComponent)
 	.component('sliderList', SliderListComponent)
 	.component('createSliderForm', CreateSliderFormComponent)
   .component('createPostForm', CreatePostFormComponent)
