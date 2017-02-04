@@ -180,6 +180,23 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
         userId: null
       }
     })
+    /*YOGESH*/
+    .state('app.create_slider_form', {
+      url: '/create-slider',
+      data: {
+        auth: true
+      },
+      views: {
+        'main@app': {
+          template: '<create_slider_form></create_slider_form>'
+        }
+      },
+      params: {
+        alerts: null,
+        userId: null
+      }
+    })
+    /*YOGESH*/
     .state('app.userroles', {
       url: '/user-roles',
       data: {
