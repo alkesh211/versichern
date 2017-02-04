@@ -29,7 +29,9 @@
 			<div class="form-group" ng-class="{ 'has-error': sliderForm.topic.$invalid && ( vm.formSubmitted || sliderForm.topic.$touched) }">
               <label for="inputImage" class="col-sm-2 control-label">Image</label>
               <div class="col-sm-10">
-                <input type="file" id="inputImage" class="form-control" ng-model="vm.topic" name="topic" placeholder="Image" required>
+                
+                <input type="file" id="inputImage" class="form-control" fileread="vm.topic" name="topic" placeholder="Image" required>
+
                 <p ng-show="sliderForm.topic.$error.required && ( vm.formSubmitted || sliderForm.topic.$touched)" class="help-block">Image is required.</p>
               </div>
             </div>

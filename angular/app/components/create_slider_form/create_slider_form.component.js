@@ -55,20 +55,19 @@ class CreateSliderFormController {
   }
 
   save1() {
-    alert('xxx')
     let Sliders = this.API.service('slider/create')
     let $state = this.$state
-
     Sliders.post({
-    'name': this.name,
-    'topic': this.topic
-    }).then(function () {
-    let alert = { type: 'success', 'title': 'Success!', msg: 'Slider has been added.' }
-    $state.go($state.current, { alerts: alert})
-    }, function (response) {
-    let alert = { type: 'error', 'title': 'Error!', msg: response.data.message }
-    $state.go($state.current, { alerts: alert})
-    })
+      'name': this.name,
+      'topic': this.topic
+    }).then(function(response) {      
+      let alert = { type: 'success', 'title': 'Success!', msg: 'Image Uploaded Successfully.' }
+          $state.go($state.current, { alerts: alert})
+    }, 
+    function(response) { // optional
+      let alert = { type: 'error', 'title': 'Error!', msg: response.data.message }
+          $state.go($state.current, { alerts: alert})
+    });
   }
 
   $onInit () {}
