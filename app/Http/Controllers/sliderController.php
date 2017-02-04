@@ -29,25 +29,26 @@ class SliderController extends Controller
         $type = explode('/',$resu[0]);
         $image_type = $type[1];
         
+        $root_path = public_path().'/img/slider/';
         
         if($image_type == 'gif')
         {
             $origi_file_name = date('ymdhis').'.gif';
             $img = imagecreatefromgif($filename);
-            $fileName = '/opt/lampp/htdocs/versichern/versichern/public/img/slider/'.$origi_file_name;
+            $fileName = $root_path.$origi_file_name;
             imagegif($img, $fileName);
         }else if($image_type == 'jpeg' ||$image_type == 'jpg')
         {
             $origi_file_name = date('ymdhis').'.jpg';
             $img = imagecreatefromjpeg($filename);
-            $fileName = '/opt/lampp/htdocs/versichern/versichern/public/img/slider/'.$origi_file_name;
+            $fileName = $root_path.$origi_file_name;
             imagejpeg($img, $fileName);
 
         }else if($image_type == 'png')
         {
             $origi_file_name = date('ymdhis').'.png';
             $img = imagecreatefrompng($filename);
-            $fileName = '/opt/lampp/htdocs/versichern/versichern/public/img/slider/'.$origi_file_name;
+            $fileName = $root_path.$origi_file_name;
             imagepng($img, $fileName);
         }else{
             return response()->error($validator->errors());
