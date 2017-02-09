@@ -1,4 +1,4 @@
-class CreateSliderFormController {
+class EditSliderFormController {
   constructor (API, $state, $stateParams) {
     'ngInject'
 
@@ -31,9 +31,9 @@ save1() {
   $onInit () {}
 }
 
-export const CreateSliderFormComponent = {
-    templateUrl: './views/app/components/create_slider_form/create_slider_form.component.html',
-    controller: CreateSliderFormController,
+export const EditSliderFormComponent = {
+    templateUrl: './views/app/components/edit_slider_form/edit_slider_form.component.html',
+    controller: EditSliderFormController,
     controllerAs: 'vm',
     bindings: {}
 }

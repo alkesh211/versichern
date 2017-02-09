@@ -12,7 +12,8 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('/', 'AngularController@serveApp');
+    Route::get('/', 'AngularController@serveFront');
+    Route::get('/admin', 'AngularController@serveApp');
     Route::get('/unsupported-browser', 'AngularController@unsupported');
     Route::get('user/verify/{verificationCode}', ['uses' => 'Auth\AuthController@verifyUserEmail']);
     Route::get('auth/{provider}', ['uses' => 'Auth\AuthController@redirectToProvider']);

@@ -24,5 +24,6 @@
         <div class="control-sidebar-bg"></div>
     </div>
     <script src="{!! elixir('js/final.js') !!}" async defer></script>
+    
 </body>
 </html>

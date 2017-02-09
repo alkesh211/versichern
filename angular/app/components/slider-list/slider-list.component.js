@@ -32,14 +32,9 @@ class SliderListController{
     }
 
     let actionsHtml = (data) => {
-      return `
-                <a class="btn btn-xs btn-warning" ui-sref="app.useredit({userId: ${data.id}})">
-                    <i class="fa fa-edit"></i>
-                </a>
-                &nbsp
-                <button class="btn btn-xs btn-danger" ng-click="vm.delete(${data.id})">
-                    <i class="fa fa-trash-o"></i>
-                </button>`
+      return `<a class="btn btn-xs btn-warning" ui-sref="app.edit_slider_form({id: ${data.id}})"><i class="fa fa-edit"></i></a>
+              &nbsp
+              <button class="btn btn-xs btn-danger" ng-click="vm.delete(${data.id})"><i class="fa fa-trash-o"></i></button>`
     }
   }
 

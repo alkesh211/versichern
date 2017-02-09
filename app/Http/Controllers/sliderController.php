@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\slider;
+use App\Slider;
 use Image;
 use Illuminate\Http\Request;
 use Cviebrock\EloquentSluggable\SluggableInterface;
@@ -23,14 +23,14 @@ class SliderController extends Controller
             'topic' => 'required',
         ]);
 
-        $filename = $request->input('topic');        
+        $filename = $request->input('topic');
         /*code to check image type*/
         $resu = explode(';base64,',$filename);
         $type = explode('/',$resu[0]);
         $image_type = $type[1];
-        
+
         $root_path = public_path().'/img/slider/';
-        
+
         if($image_type == 'gif')
         {
             $origi_file_name = date('ymdhis').'.gif';
@@ -61,10 +61,8 @@ class SliderController extends Controller
     }
     public function index()
     {
-
         //$slider = DB::table('sliders')->get();
         $slider = slider::all();
-
         return response()->success(compact('slider'));
     }
 }

@@ -1,6 +1,7 @@
 import {CreateBlockComponent} from './app/components/create-block/create-block.component';
 import {SliderListComponent} from './app/components/slider-list/slider-list.component';
 import { CreateSliderFormComponent} from './app/components/create_slider_form/create_slider_form.component';
+import { EditSliderFormComponent} from './app/components/edit_slider_form/edit_slider_form.component';
 import { CreatePostFormComponent} from './app/components/create_post_form/create_post_form.component';
 import { TablesSimpleComponent } from './app/components/tables-simple/tables-simple.component'
 import { UiModalComponent } from './app/components/ui-modal/ui-modal.component'
@@ -35,6 +36,7 @@ angular.module('app.components')
 	.component('createBlock', CreateBlockComponent)
 	.component('sliderList', SliderListComponent)
 	.component('createSliderForm', CreateSliderFormComponent)
+  .component('editSliderForm', EditSliderFormComponent)
   .component('createPostForm', CreatePostFormComponent)
   .component('tablesSimple', TablesSimpleComponent)
   .component('uiModal', UiModalComponent)

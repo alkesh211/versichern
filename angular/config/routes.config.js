@@ -196,6 +196,22 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
         userId: null
       }
     })
+
+    .state('app.edit_slider_form', {
+      url: '/edit-slider/:id',
+      data: {
+        auth: true
+      },
+      views: {
+        'main@app': {
+          template: '<edit_slider_form></edit_slider_form>'
+        }
+      },
+      params: {
+        alerts: null,
+        userId: null
+      }
+    })
     /*YOGESH*/
     .state('app.userroles', {
       url: '/user-roles',
