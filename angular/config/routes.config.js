@@ -429,4 +429,12 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
         }
       }
     })
+    .state('app.create-block', {
+      url: '/create-block',
+      views: {
+        'main@app': {
+          templateUrl: getView('create-block')
+        }
+      }
+    })
 }

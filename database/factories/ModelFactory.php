@@ -37,7 +37,14 @@ $factory->define(App\Post::class, function (Faker\Generator $faker) {
     ]; 
 });
 
-$factory->define(App\Slider:class, function (Faker\Generator $faker) {
+$factory->define(App\Slider::class, function (Faker\Generator $faker) {
+   return [
+        'name'  => $faker->name,
+        'topic' => $faker->word,
+    ]; 
+});
+
+$factory->define(App\block::class, function (Faker\Generator $faker) {
    return [
         'name'  => $faker->name,
         'topic' => $faker->word,

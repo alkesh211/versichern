@@ -12,7 +12,7 @@ class CreateSliderFormController {
     }
   }
 
-save1() {
+  save1() {
     let Sliders = this.API.service('slider/create')
     let $state = this.$state
     Sliders.post({

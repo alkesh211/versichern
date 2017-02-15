@@ -18,7 +18,7 @@ class AngularController extends Controller
     public function serveFront()
     {
         /*$customers = Slider::test();*/
-        echo "comes here";
+        //echo "comes here";
         return view('index');
     }
     /**
