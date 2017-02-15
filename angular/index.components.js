@@ -2,16 +2,6 @@ import {CreateBlockComponent} from './app/components/create-block/create-block.c
 import {SliderListComponent} from './app/components/slider-list/slider-list.component';
 import { CreateSliderFormComponent} from './app/components/create_slider_form/create_slider_form.component';
 import { EditSliderFormComponent} from './app/components/edit_slider_form/edit_slider_form.component';
-import { CreatePostFormComponent} from './app/components/create_post_form/create_post_form.component';
-import { TablesSimpleComponent } from './app/components/tables-simple/tables-simple.component'
-import { UiModalComponent } from './app/components/ui-modal/ui-modal.component'
-import { UiTimelineComponent } from './app/components/ui-timeline/ui-timeline.component'
-import { UiButtonsComponent } from './app/components/ui-buttons/ui-buttons.component'
-import { UiIconsComponent } from './app/components/ui-icons/ui-icons.component'
-import { UiGeneralComponent } from './app/components/ui-general/ui-general.component'
-import { FormsGeneralComponent } from './app/components/forms-general/forms-general.component'
-import { ChartsChartjsComponent } from './app/components/charts-chartjs/charts-chartjs.component'
-import { WidgetsComponent } from './app/components/widgets/widgets.component'
 import { UserProfileComponent } from './app/components/user-profile/user-profile.component'
 import { UserVerificationComponent } from './app/components/user-verification/user-verification.component'
 import { ComingSoonComponent } from './app/components/coming-soon/coming-soon.component'
@@ -37,16 +27,6 @@ angular.module('app.components')
 	.component('sliderList', SliderListComponent)
 	.component('createSliderForm', CreateSliderFormComponent)
   .component('editSliderForm', EditSliderFormComponent)
-  .component('createPostForm', CreatePostFormComponent)
-  .component('tablesSimple', TablesSimpleComponent)
-  .component('uiModal', UiModalComponent)
-  .component('uiTimeline', UiTimelineComponent)
-  .component('uiButtons', UiButtonsComponent)
-  .component('uiIcons', UiIconsComponent)
-  .component('uiGeneral', UiGeneralComponent)
-  .component('formsGeneral', FormsGeneralComponent)
-  .component('chartsChartjs', ChartsChartjsComponent)
-  .component('widgets', WidgetsComponent)
   .component('userProfile', UserProfileComponent)
   .component('userVerification', UserVerificationComponent)
   .component('comingSoon', ComingSoonComponent)
