@@ -31,7 +31,7 @@
               <div class="col-sm-10">
                 
                 <!-- <input type="file" id="inputImage" class="form-control" fileread="vm.topic" name="topic" placeholder="Image" required> -->
-                <textarea id="inputImage" class="form-control" fileread="vm.topic" name="topic" class="form-control" rows="3" placeholder="Enter ..." required></textarea>
+                <textarea id="inputImage" class="form-control" ng-model="vm.topic" name="topic" rows="3" placeholder="Enter ..." required></textarea>
 
                 <p ng-show="sliderForm.topic.$error.required && ( vm.formSubmitted || sliderForm.topic.$touched)" class="help-block">Image is required.</p>
               </div>

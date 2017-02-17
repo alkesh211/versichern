@@ -16,18 +16,17 @@ class blockController extends Controller
             'topic' => 'required',
         ]);
 
-        echo 'hi';exit;
-        $slider = new Slider();
+        $slider = new block();
         $slider->name = $request->input('name');
-        $slider->topic = $origi_file_name;
+        $slider->topic = $request->input('topic');
         $slider->save();
-        return response()->success(compact('slider'));
+        return response()->success(compact('block'));
     }
     public function index()
     {
-	echo 'hi';exit;
+	    echo 'hi';exit;
         //$slider = DB::table('sliders')->get();
         $slider = slider::all();
-        return response()->success(compact('slider'));
+        return response()->success(compact('block'));
     }
 }
