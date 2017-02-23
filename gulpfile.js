@@ -29,7 +29,9 @@ elixir(function (mix) {
 
   var assets = [
       'public/js/final.js',
-      'public/css/final.css'
+      'public/css/final.css',
+	  'public/js/front.js',
+      'public/css/front.css'      
     ],
     scripts = [
       './public/js/vendor.js',
@@ -37,10 +39,32 @@ elixir(function (mix) {
       './public/js/app.js',
       './public/dist/js/app.js'
     ],
+	frontScripts = [
+	  './public/js/frontapp.js',
+      './public/js/isotope.min.js',
+      './public/js/ytplayer.min.js',
+      './public/js/easypiechart.min.js',
+      './public/js/owl.carousel.min.js',
+      './public/js/lightbox.min.js',
+      './public/js/twitterfetcher.min.js',
+      './public/js/smooth-scroll.min.js',
+      './public/js/scrollreveal.min.js',
+      './public/js/parallax.js',
+      './public/js/scripts.js'
+    ],
     styles = [
       './public/css/vendor.css',
-      './public/css/app.css'
+      './public/css/app.css'	  
     ],
+	frontStyles = [
+	  './public/css/socicon.css',
+	  './public/css/iconsmind.css',
+	  './public/css/interface-icons.css',
+	  './public/css/owl.carousel.css',
+	  './public/css/lightbox.min.css',
+	  './public/css/theme.css',
+	  './public/css/custom.css'
+	],
     karmaJsDir = [
       jsOutputFolder + '/vendor.js',
       'node_modules/angular-mocks/angular-mocks.js',
@@ -55,8 +79,10 @@ elixir(function (mix) {
     .angular('./angular/')
     .ngHtml2Js('./angular/**/*.html')
     .concatScripts(scripts, 'final.js')
-    .sass('./angular/**/*.scss', 'public/css')
+    .concatScripts(frontScripts, 'front.js')
+    .sass('./angular/**/*.scss', 'public/css')	
     .styles(styles, './public/css/final.css')
+    .styles(frontStyles, './public/css/front.css')
     .version(assets)
     .browserSync({
       proxy: 'localhost:8000'

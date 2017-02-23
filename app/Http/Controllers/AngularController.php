@@ -19,7 +19,7 @@ class AngularController extends Controller
     {
         /*$customers = Slider::test();*/
         //echo "comes here";
-        return view('index');
+        return view('front');
     }
     /**
      * Page for unsupported browsers.
