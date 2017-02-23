@@ -330,4 +330,12 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
         }
       }
     })
+    .state('app.create-pages', {
+      url: '/create-pages',
+      views: {
+        'main@app': {
+          templateUrl: getView('create-pages')
+        }
+      }
+    })
 }

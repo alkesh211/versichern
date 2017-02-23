@@ -50,3 +50,10 @@ $factory->define(App\block::class, function (Faker\Generator $faker) {
         'topic' => $faker->word,
     ]; 
 });
+
+$factory->define(App\page::class, function (Faker\Generator $faker) {
+   return [
+        'name'  => $faker->name,
+        'topic' => $faker->word,
+    ]; 
+});

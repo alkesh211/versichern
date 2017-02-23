@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\block;
+use App\page;
 
 use App\Http\Requests;
 
-class blockController extends Controller
+class pageController extends Controller
 {
     public function create(Request $request)
     {
@@ -16,18 +16,17 @@ class blockController extends Controller
             'topic' => 'required',
         ]);
 
-        echo 'hi';exit;
-        $slider = new Slider();
+        $slider = new page();
         $slider->name = $request->input('name');
-        $slider->topic = $origi_file_name;
+        $slider->topic = $request->input('topic');
         $slider->save();
-        return response()->success(compact('slider'));
+        return response()->success(compact('page'));
     }
     public function index()
     {
-	echo 'hi';exit;
+	    echo 'hi';exit;
         //$slider = DB::table('sliders')->get();
         $slider = slider::all();
-        return response()->success(compact('slider'));
+        return response()->success(compact('block'));
     }
 }

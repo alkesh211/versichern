@@ -47,6 +47,12 @@ $api->group(['prefix' => 'block', 'middleware' => ['api']], function ($api) {
     $api->get('/', 'blockController@index');
 });
 
+$api->group(['prefix' => 'page', 'middleware' => ['api']], function ($api) {
+    $api->post('/create', 'pageController@create');
+    $api->get('/list', 'pageController@index');
+    $api->get('/', 'pageController@index');
+});
+
 $api->group(['middleware' => ['api', 'api.auth']], function ($api) {
     $api->get('users/me', 'UserController@getMe');
     $api->put('users/me', 'UserController@putMe');
