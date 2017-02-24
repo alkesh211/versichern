@@ -49,7 +49,7 @@ $api->group(['prefix' => 'block', 'middleware' => ['api']], function ($api) {
 
 $api->group(['prefix' => 'page', 'middleware' => ['api']], function ($api) {
     $api->post('/create', 'pageController@create');
-    $api->get('/list', 'pageController@index');
+    $api->get('/list', 'pageController@list1');
     $api->get('/', 'pageController@index');
 });
 

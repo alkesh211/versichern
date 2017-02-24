@@ -92,7 +92,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
         userId: null
       }
     })
-    /*YOGESH*/
+    
     .state('app.create_slider_form', {
       url: '/create-slider',
       data: {
@@ -124,7 +124,6 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
         userId: null
       }
     })
-    /*YOGESH*/
     .state('app.userroles', {
       url: '/user-roles',
       data: {
@@ -330,12 +329,38 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
         }
       }
     })
-    .state('app.create-pages', {
-      url: '/create-pages',
+    .state('app.create-cmspage', {
+      url: '/create-cmspage',
       views: {
         'main@app': {
-          templateUrl: getView('create-pages')
+          templateUrl: getView('create-cmspage')
         }
+      }
+    })
+    .state('app.list-cmspage', {
+      url: '/list-cmspage',
+      data: {
+        auth: true
+      },
+      views: {
+        'main@app': {
+          template: '<list-cmspage></list-cmspage>'
+        }
+      }
+    })
+    .state('app.edit-cmspage', {
+      url: '/edit-cmspage/:userId',
+      data: {
+        auth: true
+      },
+      views: {
+        'main@app': {
+          template: '<edit-cmspage></edit-cmspage>'
+        }
+      },
+      params: {
+        alerts: null,
+        userId: null
       }
     })
 }
