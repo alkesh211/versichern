@@ -40,7 +40,10 @@ elixir(function (mix) {
       './public/dist/js/app.js'
     ],
 	frontScripts = [
-	  './public/js/frontapp.js',
+	  './public/js/vendor.js',
+	  './public/js/partials.js',
+	  './public/js/app.js',
+	  './public/dist/js/app.js',
       './public/js/isotope.min.js',
       './public/js/ytplayer.min.js',
       './public/js/easypiechart.min.js',
@@ -70,7 +73,7 @@ elixir(function (mix) {
       'node_modules/angular-mocks/angular-mocks.js',
       'node_modules/ng-describe/dist/ng-describe.js',
       jsOutputFolder + '/partials.js',
-      jsOutputFolder + '/app.js',
+      jsOutputFolder + '/app.js',	  
       'tests/angular/**/*.spec.js'
   ]
 

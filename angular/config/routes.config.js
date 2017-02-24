@@ -2,6 +2,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
   'ngInject'
 
   var getView = (viewName) => {
+	alert(viewName);
     return `./views/app/pages/${viewName}/${viewName}.page.html`
   }
 
@@ -11,7 +12,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise('/')
 
-  $stateProvider
+  $stateProvider	
     .state('app', {
       abstract: true,
       views: {
@@ -33,7 +34,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.landing', {
       url: '/',
       data: {
-        auth: true
+        auth: false
       },
       views: {
         'main@app': {
