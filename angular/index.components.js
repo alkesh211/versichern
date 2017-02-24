@@ -1,4 +1,5 @@
-import {CreatePagesComponent} from './app/components/create-pages/create-pages.component';
+import {ListCmspageComponent} from './app/components/list-cmspage/list-cmspage.component';
+import {CreateCmspageComponent} from './app/components/create-cmspage/create-cmspage.component';
 import {CreateBlockComponent} from './app/components/create-block/create-block.component';
 import {SliderListComponent} from './app/components/slider-list/slider-list.component';
 import { CreateSliderFormComponent} from './app/components/create_slider_form/create_slider_form.component';
@@ -25,7 +26,8 @@ import { LoginFormComponent } from './app/components/login-form/login-form.compo
 import { RegisterFormComponent } from './app/components/register-form/register-form.component'
 
 angular.module('app.components')
-	.component('createPages', CreatePagesComponent)
+	.component('listCmspage', ListCmspageComponent)
+	.component('createCmspage', CreateCmspageComponent)
 	.component('createBlock', CreateBlockComponent)
 	.component('sliderList', SliderListComponent)
 	.component('createSliderForm', CreateSliderFormComponent)

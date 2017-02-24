@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 use App\page;
 
 use App\Http\Requests;
@@ -15,18 +16,18 @@ class pageController extends Controller
             'name'  => 'required',
             'topic' => 'required',
         ]);
-
+	
         $slider = new page();
         $slider->name = $request->input('name');
         $slider->topic = $request->input('topic');
         $slider->save();
         return response()->success(compact('page'));
     }
-    public function index()
+    public function list1()
     {
-	    echo 'hi';exit;
+	    //echo 'hi';exit;
         //$slider = DB::table('sliders')->get();
-        $slider = slider::all();
-        return response()->success(compact('block'));
+        return page::all();
+        return response()->success(compact('page'));
     }
 }
