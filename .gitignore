@@ -22,9 +22,11 @@ Homestead.json
 npm-debug.log
 public/storage
 public/views
-public/js
+public/js/*
+!public/js/front.js
 public/fonts
-public/css
+public/css/*
+!public/css/front.css
 public/build
 public/img/slider
 *~
