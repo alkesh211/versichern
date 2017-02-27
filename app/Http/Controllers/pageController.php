@@ -30,9 +30,6 @@ class pageController extends Controller
     }
     public function index()
     {
-	    //echo 'hi';exit;
-        //$slider = DB::table('sliders')->get();
-        //return page::all();
         $page = page::all();
         return response()->success(compact('page'));
     }
