@@ -1,3 +1,6 @@
+import {EditBlockComponent} from './app/components/edit_block/edit_block.component';
+import {BlockListComponent} from './app/components/block-list/block-list.component';
+import {EditCmspageComponent} from './app/components/edit-cmspage/edit-cmspage.component';
 import {ListCmspageComponent} from './app/components/list-cmspage/list-cmspage.component';
 import {CreateCmspageComponent} from './app/components/create-cmspage/create-cmspage.component';
 import {CreateBlockComponent} from './app/components/create-block/create-block.component';
@@ -27,6 +30,9 @@ import { LoginFormComponent } from './app/components/login-form/login-form.compo
 import { RegisterFormComponent } from './app/components/register-form/register-form.component'
 
 angular.module('app.components')
+	.component('editBlock', EditBlockComponent)
+	.component('blockList', BlockListComponent)
+	.component('editCmspage', EditCmspageComponent)
 	.component('listCmspage', ListCmspageComponent)
 	.component('createCmspage', CreateCmspageComponent)
 	.component('createBlock', CreateBlockComponent)

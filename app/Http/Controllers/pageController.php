@@ -3,7 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\JsonResponse;
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Database\Eloquent\Model;
+use Intervention\Image\ImageServiceProvider;
+use Intervention\Image\ImageManager;
 use App\page;
 
 use App\Http\Requests;
@@ -23,11 +28,9 @@ class pageController extends Controller
         $slider->save();
         return response()->success(compact('page'));
     }
-    public function list1()
+    public function index()
     {
-	    //echo 'hi';exit;
-        //$slider = DB::table('sliders')->get();
-        return page::all();
+        $page = page::all();
         return response()->success(compact('page'));
     }
 }

@@ -2,7 +2,6 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
   'ngInject'
 
   var getView = (viewName) => {
-	//alert(viewName);
     return `./views/app/pages/${viewName}/${viewName}.page.html`
   }
 
@@ -350,6 +349,35 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
         }
       }
     })
+
+    .state('app.listblock', {
+      url: '/list-block',
+      data: {
+        auth: true
+      },
+      views: {
+        'main@app': {
+          template: '<block-list></block-list>'
+        }
+      }
+    })
+
+    .state('app.edit_block', {
+      url: '/edit-block/:id',
+      data: {
+        auth: true
+      },
+      views: {
+        'main@app': {
+          template: '<edit_block></edit_block>'
+        }
+      },
+      params: {
+        alerts: null,
+        userId: null
+      }
+    })
+
     .state('app.create-cmspage', {
       url: '/create-cmspage',
       views: {

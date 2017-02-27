@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Database\Eloquent\Model;
+use Intervention\Image\ImageServiceProvider;
+use Intervention\Image\ImageManager;
 use App\block;
 
 use App\Http\Requests;
@@ -24,9 +30,7 @@ class blockController extends Controller
     }
     public function index()
     {
-	    echo 'hi';exit;
-        //$slider = DB::table('sliders')->get();
-        $slider = slider::all();
+	    $block = block::all();
         return response()->success(compact('block'));
     }
 }
