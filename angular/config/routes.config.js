@@ -2,7 +2,6 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
   'ngInject'
 
   var getView = (viewName) => {
-	alert(viewName);
     return `./views/app/pages/${viewName}/${viewName}.page.html`
   }
 
