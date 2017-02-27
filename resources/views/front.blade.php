@@ -19,10 +19,8 @@
     <![endif]-->
 </head>
 <body class="scroll-assist">
-    <div class="wrapper">
-        <div ui-view="layout"></div>
-        <div class="control-sidebar-bg"></div>
-    </div>
+	<a id="top"></a>
+	<div class="loader"></div>    
     <script src="{!! elixir('js/front.js') !!}" async defer></script>
     
 </body>
