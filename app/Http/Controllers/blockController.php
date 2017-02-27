@@ -24,9 +24,7 @@ class blockController extends Controller
     }
     public function index()
     {
-	    echo 'hi';exit;
-        //$slider = DB::table('sliders')->get();
-        $slider = slider::all();
+	    $slider = block::all();
         return response()->success(compact('block'));
     }
 }

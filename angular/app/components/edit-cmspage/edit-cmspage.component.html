@@ -1,0 +1,48 @@
+<section class="content-header">
+  <h1>CMS page<small>CMS page management</small></h1>
+  <ol class="breadcrumb">
+    <li><a ui-sref="app.landing"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a ui-sref="app.slider">CMS page Lists</a></li>
+    <li class="active">Add CMS page</li>
+  </ol>
+</section>
+<section class="content">
+  <div class="row">
+    <div class="col-sm-12 col-md-7">
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Add CMS page</h3>
+        </div>
+        <form enctype="multipart/form-data" class="form-horizontal" name="sliderForm" ng-submit="vm.save(sliderForm.$valid, sliderForm)" novalidate>
+          <div class="box-body">
+            <div ng-if="vm.alerts" class="alert alert-{{alert.type}}" ng-repeat="alert in vm.alerts">
+              <h4>{{alert.title}}</h4>
+              <p>{{alert.msg}}</p>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': sliderForm.name.$invalid && ( vm.formSubmitted || sliderForm.name.$touched) }">
+              <label for="inputName" class="col-sm-2 control-label">Name</label>
+              <div class="col-sm-10">
+                <input type="text" id="inputName" class="form-control" ng-model="vm.name" name="name" placeholder="Name" required>
+                <p ng-show="sliderForm.name.$error.required && ( vm.formSubmitted || sliderForm.name.$touched)" class="help-block">Name is required.</p>
+              </div>
+            </div>
+			<div class="form-group" ng-class="{ 'has-error': sliderForm.topic.$invalid && ( vm.formSubmitted || sliderForm.topic.$touched) }">
+              <label for="inputImage" class="col-sm-2 control-label">Content</label>
+              <div class="col-sm-10">
+                
+                <!-- <input type="file" id="inputImage" class="form-control" fileread="vm.topic" name="topic" placeholder="Image" required> -->
+                <textarea id="inputImage" class="form-control" ng-model="vm.topic" name="topic" rows="3" placeholder="Enter ..." required></textarea>
+
+                <p ng-show="sliderForm.topic.$error.required && ( vm.formSubmitted || sliderForm.topic.$touched)" class="help-block">text is required.</p>
+              </div>
+            </div>
+          </div>
+          <div class="box-footer">
+            <a ui-sref="app.slider" class="btn btn-default"><i class="fa fa-angle-double-left"></i> Back</a>
+            <button type="submit" class="btn btn-primary pull-right">Add New</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
