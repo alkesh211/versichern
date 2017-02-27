@@ -5,7 +5,7 @@ class ListCmspageController{
         this.API = API
     this.$state = $state
 
-    let Users = this.API.service('page/list')
+    let Users = this.API.service('page')
 
     Users.getList()
       .then((response) => {
