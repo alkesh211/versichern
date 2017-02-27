@@ -20,7 +20,12 @@
 </head>
 <body class="scroll-assist">
 	<a id="top"></a>
-	<div class="loader"></div>    
+	<div class="loader"></div>	
+	<div ui-view="header"></div>
+	<div class="main-container transition--fade">
+		<div ui-view="main"></div>
+		<div ui-view="footer"></div>
+	</div>
     <script src="{!! elixir('js/front.js') !!}" async defer></script>
     
 </body>

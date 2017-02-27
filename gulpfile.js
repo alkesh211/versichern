@@ -60,6 +60,7 @@ elixir(function (mix) {
       './public/css/app.css'	  
     ],
 	frontStyles = [
+	  './public/css/bootstrap.css',
 	  './public/css/socicon.css',
 	  './public/css/iconsmind.css',
 	  './public/css/interface-icons.css',

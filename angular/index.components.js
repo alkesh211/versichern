@@ -18,6 +18,7 @@ import { UserListsComponent } from './app/components/user-lists/user-lists.compo
 import { DashboardComponent } from './app/components/dashboard/dashboard.component'
 import { NavSidebarComponent } from './app/components/nav-sidebar/nav-sidebar.component'
 import { NavFrontHeaderComponent } from './app/components/nav-front-header/nav-front-header.component'
+import { NavFrontFooterComponent } from './app/components/nav-front-footer/nav-front-footer.component'
 import { NavHeaderComponent } from './app/components/nav-header/nav-header.component'
 import { LoginLoaderComponent } from './app/components/login-loader/login-loader.component'
 import { ResetPasswordComponent } from './app/components/reset-password/reset-password.component'
@@ -46,6 +47,7 @@ angular.module('app.components')
   .component('dashboard', DashboardComponent)
   .component('navSidebar', NavSidebarComponent)
   .component('navFrontHeader', NavFrontHeaderComponent)
+  .component('navFrontFooter', NavFrontFooterComponent)
   .component('navHeader', NavHeaderComponent)
   .component('loginLoader', LoginLoaderComponent)
   .component('resetPassword', ResetPasswordComponent)

@@ -2,7 +2,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
   'ngInject'
 
   var getView = (viewName) => {
-	alert(viewName);
+	//alert(viewName);
     return `./views/app/pages/${viewName}/${viewName}.page.html`
   }
 
@@ -10,7 +10,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     return `./views/app/pages/layout/${layout}.page.html`
   }
 
-  $urlRouterProvider.otherwise('/')
+  $urlRouterProvider.otherwise('/home')
 
   $stateProvider	
     .state('app', {
@@ -31,10 +31,30 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
         bodyClass: 'hold-transition skin-blue sidebar-mini'
       }
     })
-    .state('app.landing', {
-      url: '/',
-      data: {
+	.state('home', {
+      url: '/home',
+	  data: {
         auth: false
+      },
+      views: {        
+		'main': {
+          templateUrl: getView('home')
+        },
+		'front-slider': {
+          templateUrl: getView('front-slider')
+        },
+        'header': {
+		  templateUrl: getView('front-header')
+		},
+		'footer': {
+		  templateUrl: getView('front-footer')
+		}
+      }
+    })	
+    .state('app.landing', {
+      url: '/admin',
+      data: {
+        auth: true
       },
       views: {
         'main@app': {
