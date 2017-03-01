@@ -1,3 +1,4 @@
+import {FrontSliderComponent} from './app/components/front-slider/front-slider.component';
 import {EditBlockComponent} from './app/components/edit_block/edit_block.component';
 import {BlockListComponent} from './app/components/block-list/block-list.component';
 import {EditCmspageComponent} from './app/components/edit-cmspage/edit-cmspage.component';
@@ -30,6 +31,7 @@ import { LoginFormComponent } from './app/components/login-form/login-form.compo
 import { RegisterFormComponent } from './app/components/register-form/register-form.component'
 
 angular.module('app.components')
+	.component('frontSlider', FrontSliderComponent)
 	.component('editBlock', EditBlockComponent)
 	.component('blockList', BlockListComponent)
 	.component('editCmspage', EditCmspageComponent)

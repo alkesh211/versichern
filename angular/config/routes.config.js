@@ -30,24 +30,24 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
         bodyClass: 'hold-transition skin-blue sidebar-mini'
       }
     })
-	.state('home', {
+    .state('home', {
       url: '/home',
-	  data: {
+      data: {
         auth: false
       },
       views: {        
-		'main': {
+        'main': {
           templateUrl: getView('home')
         },
-		'front-slider': {
+        'front-slider': {
           templateUrl: getView('front-slider')
         },
         'header': {
-		  templateUrl: getView('front-header')
-		},
-		'footer': {
-		  templateUrl: getView('front-footer')
-		}
+          templateUrl: getView('front-header')
+        },
+        'footer': {
+          templateUrl: getView('front-footer')
+        }
       }
     })	
     .state('app.landing', {
