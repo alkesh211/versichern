@@ -1644,26 +1644,28 @@ mr = (function (mr, $, window, document){
                 loop = true;
             }
             sliders.push(sliderInitializer);
-            sliders[index].owlCarousel({
-                nav: arrows,
-                dots: paging,
-                dotsSpeed: 500,
-                navSpeed: 500,
-                items: items,
-                autoplay: autoplay,
-                autoplayTimeout: timing,
-                navText : false,
-                loop: loop,
-                mouseDrag: false,
-                responsive:{
-                    0:{
-                        items: 1
-                    },
-                    768:{
-                        items: items
+            setInterval(function(){
+                sliders[index].owlCarousel({
+                    nav: arrows,
+                    dots: paging,
+                    dotsSpeed: 500,
+                    navSpeed: 500,
+                    items: items,
+                    autoplay: autoplay,
+                    autoplayTimeout: timing,
+                    navText : false,
+                    loop: loop,
+                    mouseDrag: false,
+                    responsive:{
+                        0:{
+                            items: 1
+                        },
+                        768:{
+                            items: items
+                        }
                     }
-                }
-            });
+                });
+            },5000);
 
 
         });
