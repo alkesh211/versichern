@@ -97390,18 +97390,18 @@ try {
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('./views/app/components/front-slider/front-slider.component.html',
     '<section class="slider slider--animate height-100 cover cover-5 parallax" data-arrows="true" data-paging="true" data-timing="5000" ui-view="front-slider">\n' +
-    '	<!-- <ul class="slides">\n' +
+    '	<ul class="slides">\n' +
     '		<li class="imagebg" ng-repeat="permission in vm.sliderPermissions">\n' +
     '			<div class="background-image-holder">\n' +
-    '				<img id="xxxxx" alt="image" src="img/slider/{{permission.topic}}"> 	\n' +
+    '				<img alt="image" src="img/slider/{{permission.topic}}">\n' +
     '			</div>\n' +
     '		</li>\n' +
-    '	</ul> -->\n' +
-    '	<ul class="slides">\n' +
+    '	</ul>\n' +
+    '	<!-- <ul class="slides">\n' +
     '		<li class="imagebg" data-overlay="4">\n' +
     '			<div class="background-image-holder">\n' +
     '				<img alt="image" src="img/hero3.jpg" />\n' +
-    '			</div>\n' +
+    '			</div> -->\n' +
     '			<!-- <div class="container pos-vertical-center">\n' +
     '				<div class="row">\n' +
     '					<div class="col-sm-12 text-center">\n' +
@@ -97417,11 +97417,11 @@ module.run(['$templateCache', function($templateCache) {
     '					</div>\n' +
     '				</div>\n' +
     '			</div> -->\n' +
-    '		</li>\n' +
+    '		<!-- </li>\n' +
     '		<li class="imagebg" data-overlay="4">\n' +
     '			<div class="background-image-holder">\n' +
     '				<img alt="image" src="img/hero4.jpg" />\n' +
-    '			</div>\n' +
+    '			</div> -->\n' +
     '			<!-- <div class="container pos-vertical-center">\n' +
     '				<div class="row">\n' +
     '					<div class="col-sm-12 text-center">\n' +
@@ -97437,8 +97437,8 @@ module.run(['$templateCache', function($templateCache) {
     '					</div>\n' +
     '				</div>\n' +
     '			</div> -->\n' +
-    '		</li>\n' +
-    '	</ul>\n' +
+    '		<!-- </li>\n' +
+    '	</ul> -->\n' +
     '</section>');
 }]);
 })();
@@ -98583,25 +98583,6 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/create-cmspage/create-cmspage.page.html',
-    '<md-content class="Page-container">\n' +
-    '\n' +
-    '	<h1>Create page</h1>\n' +
-    '\n' +
-    '	<create-cmspage></create-cmspage>\n' +
-    '\n' +
-    '</md-content>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
   $templateCache.put('./views/app/pages/create_slider/create_slider.page.html',
     '<md-content class="Page-container">\n' +
     '\n' +
@@ -98658,6 +98639,25 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/create-cmspage/create-cmspage.page.html',
+    '<md-content class="Page-container">\n' +
+    '\n' +
+    '	<h1>Create page</h1>\n' +
+    '\n' +
+    '	<create-cmspage></create-cmspage>\n' +
+    '\n' +
+    '</md-content>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
   $templateCache.put('./views/app/pages/forgot-password/forgot-password.page.html',
     '<div class="login-box">\n' +
     '  <div class="login-logo">\n' +
@@ -98695,8 +98695,8 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/front-footer/front-footer.page.html',
-    '<nav-front-footer></nav-front-footer>');
+  $templateCache.put('./views/app/pages/front-header/front-header.page.html',
+    '<nav-front-header></nav-front-header>');
 }]);
 })();
 
@@ -98707,8 +98707,8 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/front-header/front-header.page.html',
-    '<nav-front-header></nav-front-header>');
+  $templateCache.put('./views/app/pages/front-footer/front-footer.page.html',
+    '<nav-front-footer></nav-front-footer>');
 }]);
 })();
 
@@ -98824,6 +98824,22 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/layout/layout.page.html',
+    '<div ui-view="header"></div>\n' +
+    '<div class="content-wrapper">\n' +
+    '    <div ui-view="main"></div>\n' +
+    '</div>\n' +
+    '<div ui-view="footer"></div>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
   $templateCache.put('./views/app/pages/login/login.page.html',
     '<div class="login-box">\n' +
     '  <div class="login-logo">\n' +
@@ -98842,6 +98858,26 @@ module.run(['$templateCache', function($templateCache) {
     '        <login-form></login-form>\n' +
     '      </div>\n' +
     '    </div>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/login-loader/login-loader.page.html',
+    '<div class="login-box">\n' +
+    '  <div class="login-logo">\n' +
+    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
+    '  </div>\n' +
+    '  <div class="login-box-body">\n' +
+    '    <login-loader></login-loader>\n' +
     '  </div>\n' +
     '</div>\n' +
     '');
@@ -98938,42 +98974,6 @@ module.run(['$templateCache', function($templateCache) {
     '  </div>\n' +
     '  <div class="login-box-body">\n' +
     '    <user-verification></user-verification>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/layout/layout.page.html',
-    '<div ui-view="header"></div>\n' +
-    '<div class="content-wrapper">\n' +
-    '    <div ui-view="main"></div>\n' +
-    '</div>\n' +
-    '<div ui-view="footer"></div>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/login-loader/login-loader.page.html',
-    '<div class="login-box">\n' +
-    '  <div class="login-logo">\n' +
-    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
-    '  </div>\n' +
-    '  <div class="login-box-body">\n' +
-    '    <login-loader></login-loader>\n' +
     '  </div>\n' +
     '</div>\n' +
     '');
@@ -99866,8 +99866,8 @@ module.run(['$templateCache', function($templateCache) {
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var FrontSliderController = function () {
-	    FrontSliderController.$inject = ["$scope", "$state", "$compile", "DTOptionsBuilder", "DTColumnBuilder", "API"];
-	    function FrontSliderController($scope, $state, $compile, DTOptionsBuilder, DTColumnBuilder, API) {
+	    FrontSliderController.$inject = ["$state", "API"];
+	    function FrontSliderController($state, API) {
 	        'ngInject';
 
 	        var _this = this;

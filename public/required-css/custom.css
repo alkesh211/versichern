@@ -2,3 +2,9 @@
 Add your custom styles below
 ****************************/
 
+.background-image-holder img {
+  display: block;
+}
+.background-image-holder {
+	opacity: 1;
+}

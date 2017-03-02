@@ -1,5 +1,5 @@
 class FrontSliderController{
-    constructor($scope, $state, $compile, DTOptionsBuilder, DTColumnBuilder, API){
+    constructor($state, API){
         'ngInject';
 
         this.API = API

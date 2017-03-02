@@ -30,7 +30,7 @@ elixir(function (mix) {
   var assets = [
       'public/js/final.js',
       'public/css/final.css',
-	  'public/js/front.js',
+	    'public/js/front.js',
       'public/css/front.css'      
     ],
     scripts = [
@@ -44,16 +44,16 @@ elixir(function (mix) {
 	  './public/js/partials.js',
 	  './public/js/app.js',
 	  './public/dist/js/app.js',
-      './public/required-js/isotope.min.js',
-      './public/required-js/ytplayer.min.js',
-      './public/required-js/easypiechart.min.js',
-      './public/required-js/owl.carousel.min.js',
-      './public/required-js/lightbox.min.js',
-      './public/required-js/twitterfetcher.min.js',
-      './public/required-js/smooth-scroll.min.js',
-      './public/required-js/scrollreveal.min.js',
-      './public/required-js/parallax.js',
-      './public/required-js/scripts.js'
+    './public/required-js/isotope.min.js',
+    './public/required-js/ytplayer.min.js',
+    './public/required-js/easypiechart.min.js',
+    './public/required-js/owl.carousel.min.js',
+    './public/required-js/lightbox.min.js',
+    './public/required-js/twitterfetcher.min.js',
+    './public/required-js/smooth-scroll.min.js',
+    './public/required-js/scrollreveal.min.js',
+    './public/required-js/parallax.js',
+    './public/required-js/scripts.js'
     ],
     styles = [
       './public/css/vendor.css',
