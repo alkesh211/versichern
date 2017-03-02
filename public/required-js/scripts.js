@@ -1665,7 +1665,7 @@ mr = (function (mr, $, window, document){
                         }
                     }
                 });
-            },5000);
+            },3000);
 
 
         });
