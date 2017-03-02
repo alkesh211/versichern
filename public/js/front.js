@@ -98824,22 +98824,6 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/layout/layout.page.html',
-    '<div ui-view="header"></div>\n' +
-    '<div class="content-wrapper">\n' +
-    '    <div ui-view="main"></div>\n' +
-    '</div>\n' +
-    '<div ui-view="footer"></div>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
   $templateCache.put('./views/app/pages/login/login.page.html',
     '<div class="login-box">\n' +
     '  <div class="login-logo">\n' +
@@ -98858,26 +98842,6 @@ module.run(['$templateCache', function($templateCache) {
     '        <login-form></login-form>\n' +
     '      </div>\n' +
     '    </div>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/login-loader/login-loader.page.html',
-    '<div class="login-box">\n' +
-    '  <div class="login-logo">\n' +
-    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
-    '  </div>\n' +
-    '  <div class="login-box-body">\n' +
-    '    <login-loader></login-loader>\n' +
     '  </div>\n' +
     '</div>\n' +
     '');
@@ -98974,6 +98938,42 @@ module.run(['$templateCache', function($templateCache) {
     '  </div>\n' +
     '  <div class="login-box-body">\n' +
     '    <user-verification></user-verification>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/layout/layout.page.html',
+    '<div ui-view="header"></div>\n' +
+    '<div class="content-wrapper">\n' +
+    '    <div ui-view="main"></div>\n' +
+    '</div>\n' +
+    '<div ui-view="footer"></div>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/login-loader/login-loader.page.html',
+    '<div class="login-box">\n' +
+    '  <div class="login-logo">\n' +
+    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
+    '  </div>\n' +
+    '  <div class="login-box-body">\n' +
+    '    <login-loader></login-loader>\n' +
     '  </div>\n' +
     '</div>\n' +
     '');
